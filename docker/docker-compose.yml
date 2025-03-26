@@ -21,9 +21,13 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
       ME_CONFIG_BASICAUTH: true
+    depends_on:
+      - mongo
 
   core:
     image: attil/core:1.0
     restart: always
     ports:
       - "8080:8080"
+    depends_on:
+      - mongo

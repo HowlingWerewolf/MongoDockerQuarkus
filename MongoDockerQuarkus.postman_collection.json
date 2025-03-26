@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "3973adc0-7490-4ad3-ade4-f286cf605489",
+		"name": "MongoDockerQuarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43502072"
+	},
+	"item": [
+		{
+			"name": "Get persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get persons by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons/:id",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67e411731f51b9650f7e9e2e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get persons by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons/search/:name",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons",
+						"search",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "Ati"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons/count",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Ati\",\r\n    \"birth\": \"2000-01-01\",\r\n    \"status\": \"Alive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update person",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Ati updated\",\r\n    \"birth\": \"2000-01-01\",\r\n    \"status\": \"Alive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons/:id",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67e418c744efc45ac7b64ae8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{quarkusport}}/persons/:id",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{quarkusport}}",
+					"path": [
+						"persons",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67e4133faa32971091cf5dff"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
