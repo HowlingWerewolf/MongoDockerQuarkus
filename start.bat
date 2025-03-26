@@ -4,7 +4,8 @@ call docker compose down
 cd ..
 
 echo building quarkus image
-cd code-with-quarkus
+cd core
+call mvn clean package
 call quarkus image build docker
 cd ..
 

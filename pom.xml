@@ -15,7 +15,6 @@
 	</description>
 	<modules>
 		<module>core</module>
-		<module>code-with-quarkus</module>
 	</modules>
 
 	<properties>

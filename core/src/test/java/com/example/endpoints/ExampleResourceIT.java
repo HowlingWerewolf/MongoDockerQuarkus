@@ -1,8 +1,8 @@
-package org.acme;
+package com.example.endpoints;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
 @QuarkusIntegrationTest
-class GreetingResourceIT extends GreetingResourceTest {
+class ExampleResourceIT extends ExampleResourceTest {
     // Execute the same tests but in packaged mode.
 }
